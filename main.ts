@@ -1,6 +1,3 @@
-input.onButtonPressed(Button.A, function () {
-	
-})
 input.onGesture(Gesture.LogoUp, function () {
     radio.sendValue("name", 2)
 })
@@ -9,6 +6,9 @@ input.onGesture(Gesture.TiltLeft, function () {
 })
 radio.onReceivedString(function (receivedString) {
 	
+})
+input.onGesture(Gesture.Shake, function () {
+    radio.sendNumber(1)
 })
 input.onGesture(Gesture.TiltRight, function () {
     radio.sendString("move two")
