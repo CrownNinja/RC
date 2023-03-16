@@ -1,6 +1,3 @@
-input.onButtonPressed(Button.A, function () {
-    radio.sendString("shoot")
-})
 input.onGesture(Gesture.LogoUp, function () {
     background = 1
     right = 0
