@@ -1,3 +1,6 @@
+input.onButtonPressed(Button.A, function () {
+    radio.sendNumber(7)
+})
 input.onGesture(Gesture.LogoUp, function () {
     background = 1
     right = 0
@@ -16,8 +19,11 @@ input.onGesture(Gesture.ScreenUp, function () {
     background = 0
     right = 0
 })
-input.onGesture(Gesture.Shake, function () {
-    radio.sendNumber(1)
+input.onButtonPressed(Button.AB, function () {
+    radio.sendNumber(5)
+})
+input.onButtonPressed(Button.B, function () {
+    radio.sendNumber(6)
 })
 input.onGesture(Gesture.TiltRight, function () {
     right = 1
@@ -35,7 +41,14 @@ let forward = 0
 let left = 0
 let right = 0
 let background = 0
-radio.setGroup(1)
+radio.setGroup(333)
+basic.showLeds(`
+    # # # # #
+    # # # . #
+    # # # # #
+    # # # . #
+    . # # # .
+    `)
 basic.forever(function () {
     if (background == 1) {
         radio.sendValue("name", 2)
